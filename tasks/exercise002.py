@@ -3,4 +3,10 @@
 # More examples in the test cases below.
 
 def past(h, m, s):
-    return
+
+    result = 0
+    ms = 1000
+    if h + m + s == 0:
+        return result
+    result = int(h) * 3600 * ms + int(m) * 60 * ms + int(s) * ms
+    return result

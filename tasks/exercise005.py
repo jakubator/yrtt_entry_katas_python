@@ -18,5 +18,22 @@
 # Example
 # wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
 
+import string
+
+
 def wave(people):
-    return
+
+    wave = []
+
+    if people is None:
+        return people
+
+    for idx, l in enumerate(people):
+        if l == ' ':
+            continue
+        else:    
+            upped = people[idx].upper()
+            waved = people[:idx] + upped + people[idx+1:]
+            wave.append(waved)
+
+    return wave

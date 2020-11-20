@@ -5,5 +5,17 @@
 
 # Good luck!
 
+from collections import defaultdict as dd
+
+
 def repeats(arr):
-    return
+    numbers_dict = dd(int)
+    total_sum = 0
+    for n in arr:
+        numbers_dict[n] += 1
+
+    for k, v in numbers_dict.items():
+        if v == 1:
+            total_sum += k
+
+    return total_sum
